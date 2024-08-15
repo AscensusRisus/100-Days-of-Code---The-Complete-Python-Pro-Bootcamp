@@ -21,5 +21,8 @@ files:
   - name: Logical Operators/solution.py
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 15 Aug 2024 14:56:46 UTC"
 record: -1

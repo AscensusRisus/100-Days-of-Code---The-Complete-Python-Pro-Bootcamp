@@ -24,27 +24,35 @@ print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 choice1 = input('You\'re at a crossroad, where do you want to go? '
                 'Type "left" or "right".\n').lower()
-
 if choice1 == "left":
-    choice2 = input('You\'ve come to a lake. '
-                    'There is an island in the middle of the lake. '
-                    'Type "wait" to wait for a boat. '
-                    'Type "swim" to swim across.\n').lower()
-    if choice2 == "wait":
-        choice3 = input("You arrive at the island unharmed. "
-                        "There is house with 3 doors. One red, "
-                        "one yellow and one blue. "
-                        "Which colour do you choose?\n").lower()
-        if choice3 == "red":
-            print("It's a room full of fire. Game Over")
-        elif choice3 == "yellow":
-            print("You found the treasure. You Win!")
-        elif choice3 == "blue":
-            print("You enter a room of beasts. Game Over.")
+    choice2 = input("While walking to the left you've came across a debris. ""What do you do? "
+                    "Type 'jump' to try jumping over it or 'walk around' to walk around of it.\n").lower()
+    if choice2 == "walk around":
+        choice3 = input("Now you have come to a lake. There is an island in the middle of the lake."
+                        "Type 'swim' to swim across. Type 'wait' to wait for a boat.\n").lower()
+        if choice3 == "wait":
+            choice4 = input("You arrive at the island. There is a house with 3 doors."
+                            "One red, One green. one blue. Which colour do you choose?\n").lower()
+            if choice4 == "red":
+                print("You entered a room with full of fire. Game Over!")
+            elif choice4 == "blue":
+                print("You get frozen. Game Over!")
+            elif choice4 == "green":
+                choice5 = input("You entered a room with an apple on the table. What do you do?"
+                                "Type 'eat' to eat the apple or 'throw' to throw it into trash.\n").lower()
+                if choice5 == "throw":
+                    print("Congratulations. A door with treasure has now opened.")
+                elif choice5 == "eat":
+                    print("You get poisoned. Game Over!")
+                else:
+                    print("You have done something you shouldn't! Now you are locked in this room. Game Over!")
+            else:
+                print("You didn't pick any room. You get kicked out of house. Game Over!")
         else:
-            print("You chose a door that doesn't exist. Game Over.")
+            print("You get attacked by an angry trout. Game Over!")
     else:
-        print("You got attacked by an angry trout. Game Over.")
-
+        print("You sprained your foot. Game Over!")
 else:
-    print("You fell in to a hole. Game Over.")
+    print("You fell into a hole. Game Over!")
+
+
